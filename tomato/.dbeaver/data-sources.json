@@ -1,0 +1,220 @@
+{
+	"folders": {
+		"ADMIN": {},
+		"DEV": {
+			"parent": "ADMIN"
+		},
+		"PRD": {
+			"parent": "ADMIN"
+		},
+		"DEV": {},
+		"PRD": {}
+	},
+	"connections": {
+		"mariaDB-176e9dc3dc5-665bf1f6a482bca0": {
+			"provider": "mysql",
+			"driver": "mariaDB",
+			"name": "prd-sysadmin@bastio.aws",
+			"save-password": true,
+			"show-system-objects": true,
+			"read-only": false,
+			"folder": "ADMIN/PRD",
+			"configuration": {
+				"host": "aws-prd-bastion.tomato-pos.com",
+				"port": "33306",
+				"database": "mqdb",
+				"url": "jdbc:mysql://aws-prd-bastion.tomato-pos.com:33306/mqdb",
+				"home": "mysql_client",
+				"type": "prod",
+				"auth-model": "native"
+			},
+			"custom-properties": {
+				"database.meta.separate.connection": "false"
+			}
+		},
+		"mariaDB-176e9dde99e-3b78a67afe41ec29": {
+			"provider": "mysql",
+			"driver": "mariaDB",
+			"name": "dev-sysadmin@bastion.aws",
+			"save-password": true,
+			"show-system-objects": true,
+			"read-only": false,
+			"folder": "ADMIN/DEV",
+			"configuration": {
+				"host": "aws-dev-bastion.tomato-pos.com",
+				"port": "33306",
+				"database": "stdb",
+				"url": "jdbc:mysql://aws-dev-bastion.tomato-pos.com:33306/stdb",
+				"home": "mysql_client",
+				"type": "dev",
+				"auth-model": "native"
+			},
+			"custom-properties": {
+				"database.meta.separate.connection": "false"
+			}
+		},
+		"mariaDB-177f6a7a5bc-7214cbaf0447b5d4": {
+			"provider": "mysql",
+			"driver": "mariaDB",
+			"name": "dev-batusr@bastion.aws",
+			"save-password": true,
+			"show-system-objects": true,
+			"read-only": false,
+			"folder": "DEV",
+			"configuration": {
+				"host": "aws-dev-bastion.tomato-pos.com",
+				"port": "33306",
+				"database": "stdb",
+				"url": "jdbc:mysql://aws-dev-bastion.tomato-pos.com:33306/stdb",
+				"home": "c:\\util\\MariaDB 10.5",
+				"type": "dev",
+				"auth-model": "native"
+			},
+			"custom-properties": {
+				"database.meta.separate.connection": "false",
+				"transaction.smart.commit": "false"
+			}
+		},
+		"mariaDB-177f6b168b2-49a6471e1e3d6403": {
+			"provider": "mysql",
+			"driver": "mariaDB",
+			"name": "dev-admin@bastion.aws",
+			"save-password": true,
+			"show-system-objects": true,
+			"read-only": false,
+			"folder": "ADMIN/DEV",
+			"configuration": {
+				"host": "aws-dev-bastion.tomato-pos.com",
+				"port": "33306",
+				"database": "stdb",
+				"url": "jdbc:mysql://aws-dev-bastion.tomato-pos.com:33306/stdb",
+				"home": "mysql_client",
+				"type": "dev",
+				"auth-model": "native"
+			},
+			"custom-properties": {
+				"database.meta.separate.connection": "false"
+			}
+		},
+		"mariaDB-177f6b5f1ab-5d5863ae7308f545": {
+			"provider": "mysql",
+			"driver": "mariaDB",
+			"name": "prd-admin@bastion.aws",
+			"save-password": true,
+			"show-system-objects": true,
+			"read-only": false,
+			"folder": "ADMIN/PRD",
+			"configuration": {
+				"host": "aws-prd-bastion.tomato-pos.com",
+				"port": "33306",
+				"database": "stdb",
+				"url": "jdbc:mysql://aws-prd-bastion.tomato-pos.com:33306/stdb",
+				"home": "mysql_client",
+				"type": "prod",
+				"auth-model": "native"
+			},
+			"custom-properties": {
+				"database.meta.separate.connection": "false"
+			}
+		},
+		"mariaDB-177f6b79400-5c24b4f954c41bf8": {
+			"provider": "mysql",
+			"driver": "mariaDB",
+			"name": "prd-batusr@bastion.aws",
+			"save-password": true,
+			"show-system-objects": true,
+			"read-only": false,
+			"folder": "PRD",
+			"configuration": {
+				"host": "aws-prd-bastion.tomato-pos.com",
+				"port": "33306",
+				"database": "stdb",
+				"url": "jdbc:mysql://aws-prd-bastion.tomato-pos.com:33306/stdb",
+				"home": "mysql_client",
+				"type": "prod",
+				"auth-model": "native"
+			},
+			"custom-properties": {
+				"database.meta.separate.connection": "false"
+			}
+		},
+		"mariaDB-1781eb7306f-46fb5be22675a27": {
+			"provider": "mysql",
+			"driver": "mariaDB",
+			"name": "prd-skkim@bastion.aws",
+			"save-password": true,
+			"show-system-objects": true,
+			"read-only": true,
+			"folder": "PRD",
+			"configuration": {
+				"host": "aws-prd-bastion.tomato-pos.com",
+				"port": "33306",
+				"database": "stdb",
+				"url": "jdbc:mysql://aws-prd-bastion.tomato-pos.com:33306/stdb",
+				"home": "mysql_client",
+				"type": "개인계정",
+				"auth-model": "native",
+				"handlers": {}
+			},
+			"custom-properties": {
+				"database.meta.separate.connection": "false",
+				"resultset.maxrows": "20000"
+			}
+		}
+	},
+	"virtual-models": {
+		"mariaDB-177f6b79400-5c24b4f954c41bf8": {
+			"stdb": {
+				":gd_gdsprice_mgr_log": {
+					"constraints": {
+						"VIRTUAL_PK": {
+							"type": "vpk",
+							"useAllColumns": true
+						}
+					}
+				}
+			}
+		},
+		"mariaDB-1781eb7306f-46fb5be22675a27": {
+			"stdb": {
+				":gd_gdsprice_mgr_log": {
+					"constraints": {
+						"VIRTUAL_PK": {
+							"type": "vpk",
+							"useAllColumns": true
+						}
+					}
+				}
+			}
+		}
+	},
+	"connection-types": {
+		"prod": {
+			"name": "Production",
+			"color": "org.jkiss.dbeaver.color.connectionType.prod.background",
+			"description": "Production database",
+			"auto-commit": false,
+			"confirm-execute": false,
+			"confirm-data-change": true,
+			"auto-close-transactions": true
+		},
+		"dev": {
+			"name": "Development",
+			"color": "255,255,128",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		},
+		"개인계정": {
+			"name": "개인계정",
+			"color": "255,255,0",
+			"description": "개인계정",
+			"auto-commit": false,
+			"confirm-execute": false,
+			"confirm-data-change": true,
+			"auto-close-transactions": false
+		}
+	}
+}

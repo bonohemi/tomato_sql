@@ -1,0 +1,7 @@
+/***
+ * 검증
+ */
+SELECT
+    COUNT(1) OVER()
+    , SDS.*
+FROM sd_dtfeegdssale_sum SDS WHERE SDS.STR_CD = '011001' AND SDS.SAL_DT = '20210201' AND PLU_CD = '2966886321678'

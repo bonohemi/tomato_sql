@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>tomato</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+		<nature>org.jkiss.dbeaver.DBeaverNature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>Diagrams/ERD</name>
+			<type>2</type>
+			<location>C:/Users/skkim/OneDrive/dev/리테일인사이트/ERD</location>
+		</link>
+		<link>
+			<name>Scripts/리테일인사이트</name>
+			<type>2</type>
+			<location>C:/Users/skkim/OneDrive/dev/리테일인사이트</location>
+		</link>
+	</linkedResources>
+</projectDescription>
